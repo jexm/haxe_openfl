@@ -10,3 +10,16 @@ stage.addEventListener(KeyboardEvent.KEY_UP, function k(event:KeyboardEvent) {
 				handleBackButton();
 				}
 			});
+
+
+
+
+
+
+//Still no hit test for HTML5 target ?
+public static inline function hitTest(obj1:Sprite, obj2:Sprite):Bool
+{
+   var a:Rectangle = obj1.getBounds(obj1.parent);
+   var b:Rectangle = obj2.getBounds(obj2.parent);
+   return a.intersects(b);
+}
